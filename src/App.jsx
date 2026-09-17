@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { 
   Sparkles, Smartphone, Users, TrendingUp, CheckCircle, 
-  Target, Check, Lightbulb, BarChart3
+  Target, Check, Lightbulb, BarChart3, ArrowLeft
 } from 'lucide-react';
 import { SELLERS, ORDERS, PRODUCTS_CATALOG, CIDS_METRICS, INITIAL_COST_STRUCTURE } from './data';
 import SellerAppView from './components/SellerAppView';
 import MarketingCockpitView from './components/MarketingCockpitView';
 import DirectionView from './components/DirectionView';
+import { trackReturnToCV, trackRoleSwitch } from './utils/analytics';
 
 export default function App() {
   const [activeRole, setActiveRole] = useState('seller_app'); // 'seller_app' | 'marketing' | 'direction'
@@ -140,8 +141,20 @@ export default function App() {
             Poste visé : <strong>Responsable Marketing & Relation Client</strong> — Dynamic Agro / Centre d'Initiatives pour le Développement Solidaire (CIDS-Burkina)
           </span>
         </div>
-        <div className="text-slate-400 text-[11px]">
-          Filières du Sanguié • Centrale de Zagtouli • Distribution Ouagadougou
+        <div className="flex items-center gap-3">
+          <div className="text-slate-400 text-[11px] hidden md:block">
+            Filières du Sanguié • Centrale de Zagtouli
+          </div>
+          <a
+            href="https://cv-francois-kinda-cids-burkina.synaps-lab4dev.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackReturnToCV()}
+            className="flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-emerald-400 hover:text-emerald-300 transition-colors px-3 py-1 rounded border border-slate-700 text-xs font-semibold"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>CV François KINDA</span>
+          </a>
         </div>
       </div>
 
@@ -191,7 +204,7 @@ export default function App() {
             {/* SÉLECTEUR DE PERSPECTIVES AVEC ICONES FLAT */}
             <div className="flex items-center p-1 bg-slate-100 rounded-2xl border border-slate-200">
               <button
-                onClick={() => setActiveRole('seller_app')}
+                onClick={() => { setActiveRole('seller_app'); trackRoleSwitch('seller_app'); }}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   activeRole === 'seller_app'
                     ? 'bg-emerald-700 text-white shadow-sm'
@@ -202,7 +215,7 @@ export default function App() {
                 <span>App Vendeur Terrain</span>
               </button>
               <button
-                onClick={() => { setActiveRole('marketing'); setActiveTab('sellers'); }}
+                onClick={() => { setActiveRole('marketing'); setActiveTab('sellers'); trackRoleSwitch('marketing'); }}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   activeRole === 'marketing'
                     ? 'bg-slate-900 text-white shadow-sm'
@@ -213,7 +226,7 @@ export default function App() {
                 <span>Cockpit Marketing & Ventes</span>
               </button>
               <button
-                onClick={() => { setActiveRole('direction'); setActiveTab('stocks'); }}
+                onClick={() => { setActiveRole('direction'); setActiveTab('stocks'); trackRoleSwitch('direction'); }}
                 className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   activeRole === 'direction'
                     ? 'bg-amber-600 text-white shadow-sm'
