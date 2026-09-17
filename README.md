@@ -1,16 +1,56 @@
-# React + Vite
+# Dynamic Agro Hub — Cockpit Opérationnel & CRM
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> **Démonstrateur Stratégique & Opérationnel de Pilotage Commercial**  
+> **Candidature :** Responsable Marketing & Relation Client — **Dynamic Agro / Centre d'Initiatives pour le Développement Solidaire (CIDS-Burkina)**  
+> **Auteur :** François KINDA
 
-Currently, two official plugins are available:
+🌐 **Démo Interactive en Ligne :** [https://synapslab4dev-git.github.io/dynamic-agro-hub/](https://synapslab4dev-git.github.io/dynamic-agro-hub/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎯 Contexte & Mission
+Le **Centre d'Initiatives pour le Développement Solidaire (CIDS-Burkina)** forme 25 jeunes agripreneurs dans la province du Sanguié (aviculture locale, élevage porcin sain, maraîchage agro-écologique).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Dynamic Agro** est l'antenne logistique et commerciale basée à Zagtouli (Ouagadougou) assurant :
+1. L'achat garanti à prix équitable auprès des 25 fermiers du Sanguié.
+2. Le stockage sous chaîne du froid à Zagtouli.
+3. La distribution urbaine via 5 vendeurs à moto.
+4. Le rapprochement de caisse zéro fuite (Espèces et Mobile Money).
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 Les 3 Perspectives Métier
+
+- **1. App Vendeur Terrain (Mobile-first) :**
+  - Pointage de tournée bimodal (Reconnaissance OCR de carnet / Saisie manuelle rapide).
+  - Objectifs de prospection terrain gamifiés (semaine / mois) avec suivi de la prime (ex: 15 000 FCFA à 30 comptes).
+  - Enregistrement instantané d'un nouveau prospect en tournée.
+
+- **2. Cockpit Marketing & Relation Client :**
+  - Supervision des 5 vendeurs à moto avec comparaison graphique par mode de paiement.
+  - Commandes du jour et **suivi satisfaction client WhatsApp en 1 clic**.
+  - Pipeline B2B en 3 étapes (*Contacté* → *Négociation* → *Contrat Signé*).
+  - Registre de gestion Qualité & SAV avec protocole de résolution en 24h.
+  - Calendrier éditorial et maquettes visuelles intégrées.
+
+- **3. Direction & CIDS-Burkina :**
+  - Stocks et économie unitaire nette par produit.
+  - Mesure d'impact et débouchés pour les 25 fermiers du Sanguié (bailleurs Enabel, Coopération Suisse).
+  - Synthèse financière, point mort et réconciliation de caisse.
+  - Scorecard Bancaire & Solvabilité (Grade A+, ratios de liquidité et d'endettement, exports CSV et PDF).
+  - Paramétrage des charges fixes avec double confirmation de sécurité.
+
+---
+
+## 🧠 Outils d'Ingénierie Décisionnelle
+
+- **ViabiTarget :** Rétro-ingénierie financière calculant le seuil de rentabilité (Point Mort) et traduisant les objectifs en quotas physiques réels (poulets, kg de porc, paniers bio).
+- **RentaSIM :** Simulateur d'arbitrage financier et d'amortissement pré-décision (financement sur excédent net) et post-acquisition (CA d'absorption d'urgence).
+
+---
+
+## 🛠️ Stack Technique
+
+- **Frontend :** React 19, Vite, Tailwind CSS v4, Lucide React Icons
+- **Déploiement :** GitHub Actions CI/CD sur GitHub Pages
+- **Documentation complète :** [DOCUMENTATION_COMPLETE_APPLICATION.md](./DOCUMENTATION_COMPLETE_APPLICATION.md)
