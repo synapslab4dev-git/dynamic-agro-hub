@@ -4,7 +4,7 @@
 > **Candidature :** Responsable Marketing & Relation Client — **Dynamic Agro / Centre d'Initiatives pour le Développement Solidaire (CIDS-Burkina)**  
 > **Auteur :** François KINDA
 
-🌐 **Démo Interactive en Ligne :** [https://synapslab4dev-git.github.io/dynamic-agro-hub/](https://synapslab4dev-git.github.io/dynamic-agro-hub/)
+🌐 **Démo Interactive en Ligne :** [https://dynamic-agro.synaps-lab4dev.com/](https://dynamic-agro.synaps-lab4dev.com/)
 
 ---
 
